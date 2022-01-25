@@ -42,6 +42,8 @@ dependencies {
 	kapt("com.querydsl:querydsl-apt:4.2.2:jpa")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
+	implementation("org.apache.httpcomponents:httpclient:4.5.13")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 
