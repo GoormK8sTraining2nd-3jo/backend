@@ -1,4 +1,4 @@
-package kr.kua.kotlin_spring_boot_example
+package kr.kua.backend
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,6 +1,6 @@
-package kr.kua.kotlin_spring_boot_example.entity.members
+package kr.kua.backend.entity.members
 
-import kr.kua.kotlin_spring_boot_example.entity.BaseDateEntity
+import kr.kua.backend.entity.BaseDateEntity
 import lombok.Getter
 import lombok.Setter
 import javax.persistence.*

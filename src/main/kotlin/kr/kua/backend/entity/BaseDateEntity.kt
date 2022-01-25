@@ -1,4 +1,4 @@
-package kr.kua.kotlin_spring_boot_example.entity
+package kr.kua.backend.entity
 
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate

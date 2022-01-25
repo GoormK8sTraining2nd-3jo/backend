@@ -1,4 +1,4 @@
-package kr.kua.kotlin_spring_boot_example
+package kr.kua.backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
