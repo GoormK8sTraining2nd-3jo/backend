@@ -1,1 +1,1 @@
-rootProject.name = "kotlin_spring_boot_example"
+rootProject.name = "k8s-backend"
