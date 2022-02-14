@@ -1,22 +1,4 @@
-# Kotlin-Spring_Boot-Example
+## 쿠버네티스 전문가 양성 과정 2기 3조 백엔드 어플리케이션
 
-Spring Boot Project composed of Kotlin.
-
-a Very Simple Project
-
-### Using
-- java 11
-- jvm `v1.5.21`
-- kapt `v1.4.10`
-- Spring Boot `v2.5.4`
-- querydsl-jpa `v4.2.1`
-- jdbc:mariadb `v2.7.0`
-
-### Dependency list.
-- Spring Boot JPA
-- Spring Boot Security
-- Spring Boot Validation
-- Spring Boot Web
-- Querydsl
-- jdbc:mariadb
-- lombok
+- S3 로 파일 업로드 및 AWS RDS 에 DB 쿼리 로직 구현
+- 파일 업로드 API, 조회 API 제공
