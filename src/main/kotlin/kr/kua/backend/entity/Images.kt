@@ -8,7 +8,7 @@ import javax.persistence.*
 @Getter
 @Setter
 @Table(name = "images")
-class Images(fileNameParam: String, pathParam: String) {
+class Images(fileNameParam: String?, pathParam: String) {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,12 @@ class Images(fileNameParam: String, pathParam: String) {
     lateinit var path: String
 
     constructor(fileNameParam: String) : this(fileNameParam, "")
+    constructor() : this(null, "") { }
+
     init {
-        this.fileName = fileNameParam
-        this.path = pathParam
+        if (!fileNameParam.isNullOrEmpty()) {
+            this.fileName = fileNameParam
+            this.path = pathParam
+        }
     }
 }
