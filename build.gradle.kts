@@ -8,7 +8,7 @@ plugins {
 	kotlin("kapt") version "1.4.10"
 }
 
-group = "kr.kua.kotlin_spring_boot_example"
+group = "kr.kua.backend"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -38,6 +38,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("com.querydsl:querydsl-jpa:4.2.1")
 	implementation("org.mariadb.jdbc:mariadb-java-client:2.7.0")
+	implementation("com.google.code.gson:gson:2.8.9")
 	compileOnly("org.projectlombok:lombok")
 	kapt("com.querydsl:querydsl-apt:4.2.2:jpa")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -49,6 +50,8 @@ dependencies {
 	testImplementation("org.springframework.security:spring-security-test")
 
 	annotationProcessor("org.projectlombok:lombok")
+	annotationProcessor("jakarta.persistence:jakarta.persistence-api")
+	annotationProcessor("jakarta.annotation:jakarta.annotation-api")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	annotationProcessor(group = "com.querydsl", name = "querydsl-apt", classifier = "jpa")
 }

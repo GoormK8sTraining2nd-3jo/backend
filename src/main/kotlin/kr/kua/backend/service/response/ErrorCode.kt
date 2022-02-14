@@ -7,4 +7,6 @@ enum class ErrorCode(val status: Int, val code: String, val message: String) {
 
     // Common
     SUCCESS(302, "0", "Success"),
+
+    UNKNOWN_ERROR(400, "UF01", "Unknown Error"),
 }
