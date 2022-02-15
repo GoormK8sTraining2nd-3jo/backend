@@ -22,7 +22,7 @@ class Images(fileNameParam: String?, pathParam: String) {
     lateinit var path: String
 
     constructor(fileNameParam: String) : this(fileNameParam, "")
-    constructor() : this(null, "") { }
+    constructor() : this(null, "") {}
 
     init {
         if (!fileNameParam.isNullOrEmpty()) {

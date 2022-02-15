@@ -1,21 +1,15 @@
 package kr.kua.backend.service.control
 
-import com.amazonaws.regions.Regions
-import com.amazonaws.services.s3.AmazonS3
 import com.amazonaws.services.s3.AmazonS3Client
 import com.amazonaws.services.s3.model.CannedAccessControlList
-import com.amazonaws.services.s3.model.ObjectMetadata
 import com.amazonaws.services.s3.model.PutObjectRequest
 import kr.kua.backend.entity.Images
 import kr.kua.backend.entity.domain.ImagesRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
-import org.springframework.stereotype.Repository
-import java.io.ByteArrayInputStream
 import java.io.File
 import java.io.FileOutputStream
-import java.io.InputStream
 import java.util.*
 import javax.swing.filechooser.FileSystemView
 
@@ -42,7 +36,13 @@ class S3UploadImage {
         fileOutputStream.write(decodedBytes)
         fileOutputStream.close()
 
-        amazonS3Client.putObject(PutObjectRequest(bucket, fileName, file).withCannedAcl(CannedAccessControlList.PublicRead))
+        amazonS3Client.putObject(
+            PutObjectRequest(
+                bucket,
+                fileName,
+                file
+            ).withCannedAcl(CannedAccessControlList.PublicRead)
+        )
 
         val image = Images(fileName, file.path)
         imagesRepository.save(image)
