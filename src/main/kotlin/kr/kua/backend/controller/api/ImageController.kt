@@ -25,12 +25,14 @@ class ImageController {
     @Autowired
     lateinit var getImages: GetImages
 
+    @CrossOrigin(origins=["*"])
     @PostMapping("/upload")
     fun imageUpload(@RequestBody @Valid s3UploadImageRequest: S3UploadImageRequest): BaseResult {
         s3UploadImage.upload(s3UploadImageRequest.base64, s3UploadImageRequest.extension)
         return responseService.successResult
     }
 
+    @CrossOrigin(origins=["*"])
     @GetMapping
     fun getImages(): ImageListResult {
         return responseService.getImageListResult(getImages.get())
